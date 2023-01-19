@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="../stylesheets/style.css">
+  <title>Home</title>
+</head>
+<body>
+  <div id="main">
+    <div id="left">
+      <div id="icons">
+        <div id="topicon">
+          <i id="sideBarBtn" class="sideBtn ri-file-copy-2-fill"></i>
+          <i class="sideBtn ri-search-2-line"></i>
+          <i class="sideBtn ri-git-branch-line"></i>
+          <i class="sideBtn ri-bug-line"></i>
+          <i class="sideBtn ri-layout-grid-line"></i>
+        </div>
+        <div id="bottomicon">
+          <i class="sideBtn ri-user-line"></i>
+          <i class="sideBtn ri-settings-3-fill"></i>
+        </div>
+      </div>
+      <div id="filesctn">
+        <div id="brand">
+          <h3>ƬɈ'ᵴ CꝹᶑE <span>Editor</span></h3>
+          <i id="display" class="ri-file-add-line"></i>
+        </div>
+        <hr>
+        <form action="/details" method="post">
+          <input autofocus name="filename" id="input" type="text" placeholder="EnterFileName">
+        </form>
+        <div id="created-files">
+          <% if(files.length !== 0){ %>
+            <% files.forEach(function(val){ %>
+              <h4> <%= val %> <span><a id="open" href=<%="/open/"+val%> ><i class="ri-share-box-fill"></i></a><a href=<%="/delete/"+val%>><i class="ri-delete-bin-5-fill"></i></a></span></h4>
+            <% }) %>
+          <% }else{ %>
+              <h4>No Files Here</h4>
+          <% } %>
+        </div>
+      </div>
+    </div>
+    <div id="right">
+      <div id="nav">
+        <% if(filename.length > 0){ %>
+        <h4><%=filename%><span><a href=<%="/closefile/"+filename%>><i class="ri-close-fill"></i></a></span></h4>
+        
+        <button id="btn">
+          <span>File Saved</span><i class="ri-check-double-fill"></i>
+        </button>
+        <% } %>
+        
+      </div>
+      <% if(files.length !== 0){ %>
+        <div id="textpad">
+          <form method="post" id="formtext" action=<%="/savefile/"+filename%>>
+            <textarea spellcheck="false" name="textdata" id="" cols="30"><%=data%></textarea>
+            <!-- <input value="Save" type="submit"> -->
+          </form>
+        </div>
+      <% }else{ %>
+        <div id="textback">
+          <img src="https://img.freepik.com/free-vector/no-data-concept-illustration_114360-616.jpg?w=740&t=st=1674137787~exp=1674138387~hmac=5587fabe1b641402be7713a050837fbea56cbd508cfb305d95eac06c64effb15" alt="">
+        </div>
+      <% } %>
+    </div>
+  </div>
+  <script src="../javascripts/drg.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!-- <div id="main">
+    <form action="/contact">
+      <input type="text" name="filename">
+    </form>
+    <hr>
+    <div id="ekdiv">
+      <% files.forEach(function(val){ %>
+        <h4>
+          <%=val%> 
+          <span>
+            <i class="ri-share-box-line"></i>
+            <a href=<%="/delete/"+val%>>
+              <i class="ri-delete-bin-fill"></i>
+            </a>
+          </span>
+        </h4>
+      <% }) %>
+    </div>
+  </div> -->
+
+  /* router.get('/',function(req,res){
+    fs.readdir("./files",function(err,files){
+      res.render("index",{files})
+    })
+  });
+  
+  router.get("/contact",function(req,res){
+    fs.writeFile(`./files/${req.query.filename}`,"",function(err){
+      if(err) res.send(err)
+      else {
+        res.redirect("/");
+      }
+    })
+  });
+  
+  router.get("/delete/:plc",function(req,res){
+    fs.unlink(`./files/${req.params.plc}`,function(err){
+      if(err) res.send(err)
+      else{
+        res.redirect("/");
+      }
+    })
+  }); */

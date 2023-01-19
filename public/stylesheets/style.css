@@ -1,0 +1,234 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+#left{
+  width: 25%;
+  height: 100vh;
+  display: flex;
+  background-color: palegreen;
+}
+
+#right{
+  width: 75%;
+  height: 100vh;
+  background-color: white;
+}
+
+#left #icons{
+  width: 15%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: plum;
+  padding: 20px 0px;
+}
+#icons #topicon,#icons #bottomicon{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+#icons #topicon i{
+  margin-bottom: 15px;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 50%;
+}
+#icons #bottomicon i{
+  margin-top: 15px;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 50%;
+}
+#sideBarBtn:hover{
+  cursor: pointer;
+  /* background-color: paleturquoise; */
+  box-shadow: inset 1px 1px 5px 0px black;
+}
+#sideBarBtn:active{
+  background-color: rgba(98, 98, 98, 0.432);
+}
+.sideBtn:active{
+  background-color: rgba(98, 98, 98, 0.432);
+}
+.sideBtn:hover{
+  cursor: pointer;
+  /* background-color: paleturquoise; */
+  box-shadow: inset 1px 1px 5px 0px black;
+}
+#left #filesctn{
+  width: 85%;
+  height: 100%;
+  background-color: paleturquoise;
+  padding: 20px;
+  /* transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s; */
+}
+
+#filesctn h3{
+  position: relative;
+  color: rgb(49, 49, 49);
+  
+}
+#filesctn h3 span{
+  font-size: 13px;
+  color: rgb(83, 83, 98);
+  font-weight: 900;
+  position: absolute;
+  bottom: -3px;
+}
+
+#brand{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#brand i{
+  cursor: pointer;
+}
+#filesctn hr{
+  margin: 20px 0px;
+  border: none;
+  background: linear-gradient(to right,rgb(128, 0, 85),rgb(93, 0, 255),rgb(0, 0, 0));
+  width: 100%;
+  height: .5px;
+}
+
+#filesctn form input{
+  padding: 8px 12px;
+  font-size: 10px;
+  outline: grey;
+  font-weight: 600;
+  color: rgb(0, 115, 255);
+  display: none;
+}
+
+#created-files{
+  margin-top: 20px;
+  margin-left: 14px;
+  font-family: Gilroy;
+}
+#created-files h4{
+  font-size: 15px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#created-files h4 a i{
+  color: rgb(59, 59, 59);
+  margin-left: 5px;
+}
+#created-files h4 a{
+  text-decoration: none;
+}
+
+#right #nav{
+  width: 100%;
+  height: 9%;
+  /* background-color: rgb(0, 0, 0); */
+  background-color: rgb(45, 45, 45);
+  border-bottom: 5px solid rgb(122, 122, 122);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+}
+
+#right #nav h4{
+  /* background-color: white; */
+  background-color: gray;
+  color: white;
+  font-family: Gilroy;
+  font-weight: 400;
+  padding: 3px 5px;
+  border-radius: 10px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#right #nav h4 i{
+  font-size: 12px;
+  margin-left: 5px;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) .5s;
+  border-radius: 20px;
+  color: white;
+}
+#right #nav span a{
+  text-decoration: none;
+}
+#nav h4 i:hover{
+  background-color: rgba(45, 45, 45, 0.68);
+  cursor: pointer;
+}
+
+#nav #btn{
+  padding: 3px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  border: none;
+  background-color: rgb(43, 255, 0);
+}
+
+#nav #btn span{
+  font-weight: 600;
+}
+
+#nav #btn i{
+  margin-left: 5px;
+  font-size: 18px;
+}
+
+#textpad, #textback{
+  width: 100%;
+  /* min-height: 91%; */
+  height: 91%;
+  background-color: rgb(255, 255, 255);
+}
+#textpad form{
+  width: 100%;
+  height: 100%;
+}
+#textpad form textarea{
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  padding: 30px;
+  font-size: 25px;
+  font-family: Gilroy;
+  resize: none;
+}
+#textpad textarea::-webkit-scrollbar{
+  display: none;
+}
+#textback{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#textback img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
